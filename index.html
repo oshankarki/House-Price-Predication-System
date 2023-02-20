@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+    <header class="nav-container">
+        <img class="logo" src="assets/images/logo.png" alt="logo" width="150px">
+        <nav>
+            <ul class="nav_links" id="hamburger">
+                <li><a href="#" class="nav-links-href">Home</a></li>
+                <li><a href="predict.html" class="nav-links-href">Predict</a></li>
+                <li><a href="login.html" class="nav-links-href">SignUp</a></li>
+                <li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="mainPage">
+        <div class="paragraph">
+            <div class="WhyUs">Why Us?</div>
+            <p class="para-content">You can get a quick and reliable estimate </br>of your home's worth in just a few clicks. Choose HomeWise for the wisdom and confidence you need when it comes to your home's value.</p>
+            <br>
+            <button class="btn-predict"><span style="color: aliceblue;">Home Worth</span></button>
+
+        </div>
+
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="left">
+            <img src="assets/images/logo.png">
+            <h3>About <span>Home Wise</span></h3>
+
+
+        </div>
+
+        <div class="center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p> Kathmandu, Nepal</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>0245367424</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:info@oxford.com">info@oxford.com</a></p>
+            </div>
+        </div>
+        <div class="right">
+            <p class="companyabout">
+                <span><strong>About HouseWise</strong></span> Discover your home's worth with HomeWise - the smart solution for home value predictions. Get accurate and up-to-date estimates with ease</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("hamburger");
+            if (x.className === "nav_links") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav_links";
+            }
+        }
+    </script>
+</body>
+
+</html>

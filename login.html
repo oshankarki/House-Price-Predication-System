@@ -1,0 +1,83 @@
+<OCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Login</title>
+
+    </head>
+
+    <body>
+        <header class="nav-container">
+            <img class="logo" src="assets/images/logo.png" alt="logo" width="150px">
+            <nav>
+                <ul class="nav_links" id="hamburger">
+                    <li><a href="index.html" class="nav-links-href">Home</a></li>
+                    <li><a href="predict.html" class="nav-links-href">Predict</a></li>
+                    <li><a href="#" class="nav-links-href">SignUp</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main-login">
+            <div class="container-form">
+                <div class="log-in-container">
+                    <div class="signIn">
+                        <h1 class="login">Sign In</h1>
+                    </div>
+                    <form method="POST" class="auth_form">
+
+                        <input type="text" name="user" id="name" value="" placeholder="Username" class="auth_input">
+                        <input type="password" name="pass" id="password" value="" placeholder="Password" class="auth_input">
+
+                        <button type="submit" name="submit" class="btn-login">Login</button>
+                    </form>
+                </div>
+                <div class="account_create">Don't have a account?
+                    <a href="register.html" class="create">Create</a>
+                </div>
+                <br>
+            </div>
+        </div>
+        <footer class="footer-distributed">
+
+            <div class="left">
+                <img src="assets/images/logo.png">
+                <h3>About <span>Home Wise</span></h3>
+
+
+            </div>
+
+            <div class="center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p> Kathmandu, Nepal</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>0245367424</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:info@oxford.com">info@oxford.com</a></p>
+                </div>
+            </div>
+            <div class="right">
+                <p class="companyabout">
+                    <span><strong>About HouseWise</strong></span> Discover your home's worth with HomeWise - the smart solution for home value predictions. Get accurate and up-to-date estimates with ease</p>
+                </p>
+            </div>
+        </footer>
+    </body>
+
+    </html>

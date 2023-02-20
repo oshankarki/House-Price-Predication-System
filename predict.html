@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/predict.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+
+
+
+    <title>Predict Page</title>
+
+</head>
+
+<body>
+    <header class="nav-container">
+        <img class="logo" src="assets/images/logo.png" alt="logo" width="150px">
+        <nav>
+            <ul class="nav_links" id="hamburger">
+                <li><a href="index.html" class="nav-links-href">Home</a></li>
+                <li><a href="#" class="nav-links-href">Predict</a></li>
+                <li><a href="login.html" class="nav-links-href">SignUp</a></li>
+                <li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="card">
+
+        <div class="card-body  d-flex justify-content-center">
+
+            <div class="col-md-6 p_form">
+                <form class="predict_form">
+                    <div class="form-group"> <label for="building_class">Building Class</label> <input type="number" class="form-control" id="building_class" min="1" max="200"> </div>
+                    <div class="form-group"> <label for="building_type">Type of Building</label> <select class="mb-3 form-control" id="building_type">
+                            <option>Single Family</option>
+                            <option>Two Family Converted</option>
+                            <option>Duplex,</option>
+                            <option>Town House</option>
+                        </select> </div>
+                    <div class="form-group"> <label for="total_area">Total Area(in sqft)</label> <input type="number" class="form-control" id="total_area" min="0"> </div>
+                    <div class="form-group"> <label for="zoning">Zoning</label> <select class="mb-3 form-control" id="zoning">
+                            <option>Residential low density</option>
+                            <option>Residential medium density</option>
+                            <option>Future Village</option>
+                            <option>All</option>
+                        </select> </div>
+                    <div class="form-group"> <label for="average_bedroom">Average Bedrooms</label> <select class="mb-3 form-control" id="average-bedroom">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select> </div>
+                    <div class="form-group"> <label for="kitchen_quality">Kitchen Quality</label> <select class="mb-3 form-control" id="kitchen_quality">
+                            <option>Well Furnished</option>
+                            <option>Partially Furnished</option>
+                        </select> </div>
+                    <div class="form-group"> <label for="sale_type">Type of house(Sale)</label> <select class="mb-3 form-control" id="sale_type">
+                            <option>Normal</option>
+                            <option>Abnormal</option>
+                            <option>Partial</option>
+                            <option>AdjLand</option>
+                        </select> </div>
+                    <div class="form-group"> <label for="roof_style">Roof Style</label> <select class="mb-3 form-control" id="sale_type">
+                            <option>Gable</option>
+                            <option>Gambrel</option>
+                            <option>Hip</option>
+                        </select> </div>
+                    <div class="form-group"> <label for="building_class">Building Class</label> <input type="number" class="form-control" id="building_class" min="1" max="200"> </div>
+                    <div class="form-group"> <label for="utilities">Utilitie</label> <input type="text" class="form-control" id="utilities" value="All Facilities available"> </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group"> <label for="zoning">Alley access</label>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio1" name="alley-access" value="pave" checked>Pave <label class="form-check-label" for="radio1"></label> </div>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio2" name="alley-access" value="gravel">Gravel <label class="form-check-label" for="radio2"></label> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"> <label for="road_access">Type of road access</label>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio1" name="road_access" value="pave" checked>Pave <label class="form-check-label" for="radio1"></label> </div>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio2" name="road_access" value="gravel">Gravel <label class="form-check-label" for="radio2"></label> </div>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio2" name="road_access" value="NA">Not applicable <label class="form-check-label" for="radio2"></label> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group"> <label for="street">Street</label>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio1" name="street" value="pave" checked>Pave <label class="form-check-label" for="radio1"></label> </div>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio2" name="street" value="gravel">Gravel <label class="form-check-label" for="radio2"></label> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"> <label for="land_slope">Slope Of land</label>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio1" name="land_slope" value="pave" checked>Gentle Slope <label class="form-check-label" for="radio1"></label> </div>
+                                <div class="form-check"> <input type="radio" class="form-check-input" id="radio2" name="land_slope" value="gravel">Moderate Slope <label class="form-check-label" for="radio2"></label> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn_predict" name="submit">Predict Price</button>
+
+                </form>
+                <br>
+
+                <div class="result">
+                    <p class="predict">The Predicted Price is: $500000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-distributed">
+
+        <div class="left">
+            <img src="assets/images/logo.png">
+            <h3>About <span>Home Wise</span></h3>
+
+
+        </div>
+
+        <div class="center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p> Kathmandu, Nepal</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>0245367424</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:info@oxford.com">info@oxford.com</a></p>
+            </div>
+        </div>
+        <div class="right">
+            <p class="companyabout">
+                <span><strong>About HouseWise</strong></span> Discover your home's worth with HomeWise - the smart solution for home value predictions. Get accurate and up-to-date estimates with ease</p>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
