@@ -1,47 +1,42 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
-const User = require("./model/User");
-// const parser = require('body-parser');
+const fileUpload = require('express-fileupload');
+
+const dotenv = require('dotenv')
+dotenv.config()
+
+const PORT = process.env.PORT || 3000;
+const dbConn = require('./app/config/db');
+dbConn();
+const cors = require('cors');
+
 app.use(express.json());
-//url encoded parser
-//app.use(express.urlencoded()); //from form 
+app.use('/uploads', express.static('public/uploads'));
+
+app.use(fileUpload());
+app.use(cors());
+
+const userRoutes = require('./app/routes/route.user');
 
 
-app.get('/', (req, res) => {
-    res.send("Welcome!");
-});
-
-app.get('/user', (req, res) => {
-    res.send(User.find());
-});
-
-app.post('/user', (req, res) => {
-    try {
-        const user = new User(req.body)
-        console.log(req.body);
-        user.save();
-        res.end(user);
-    } catch (e) {
-        res.send(e.message);
-    }
-});
 
 
-// app.delete('/user', (req, res) => {
-//     users = users.filter(u => u.id != req.query.id);
-//     res.send("Deleted!");
-// });
 
-app.delete('/user/:id', (req, res) => {
-    User.deleteById(req.params.id);
-    res.send("Deleted!");
-});
 
-//all represent all the request method
-app.all('*', (req, res) => {
-    res.end("404 not found");
+app.use('/api/v1', authRoutes);
+app.use('/api/v1/user', userRoutes);
+
+
+
+
+
+const verifyJWT = require('./app/middlewares/verifyJWT');
+// app.use(verifyJWT);
+
+app.get('/api/v1/test', (req, res) => {
+    res.send('Hello World!' + req.user);
 })
+
 app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
